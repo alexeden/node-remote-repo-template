@@ -1,18 +1,22 @@
 # Node Remote Repo Template
 
+## Clone the repo
+
+Since this is a template, you'll wanna add some flags to your clone command so that you can get the repo without all of its commit history and emotional baggage:
+
+```
+$ git clone --depth=1 https://github.com/alexeden/node-remote-repo-template.git <your new repo's name>
+$ rm -rf !$/.git
+```
+
+
 ## Workflow
 
 > Make sure you have [passwordless SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md) access to your Raspberry Pi.
 
-
-Clone/fork this repo onto both your local machine and your Raspberry Pi.
-
-```bash
-$ git clone --recurse-submodules https://github.com/alexeden/<<<repository name>>>
-```
+Clone/fork your repo onto both your local machine and your Raspberry Pi.
 
 `npm install` inside the project on both your local machine and the remote device.
-
 
 Create a file called `sync.config.json` on the machine on which you'll be developing, and substitute these values with your own:
 
