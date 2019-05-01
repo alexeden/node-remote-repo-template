@@ -1,7 +1,7 @@
 {
-  "name": "rpi-um7-imu",
+  "name": "<<<package name>>>",
   "version": "1.0.0",
-  "description": "",
+  "description": "<<<description>>>",
   "main": "dist/index.js",
   "scripts": {
     "build-changes": "echo 'Source will rebuild on changes' && nodemon --config nodemon.build.json",
@@ -9,31 +9,26 @@
     "test": "ts-node -P examples/tsconfig.json",
     "lint": "tslint -c ./tslint.json --project examples && tslint -c ./tslint.json --project src",
     "prepublish": "npm run lint && npm run build",
-    "quick-build": "rimraf dist && node-gyp build && tsc -p src",
-    "sync-changes": "echo 'Changes will be pushed to Raspberry Pi' && nodemon --config nodemon.sync.json"
+    "sync-changes": "echo 'Changes will be pushed to remote device' && nodemon --config nodemon.sync.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexeden/rpi-um7-imu.git"
+    "url": "git+https://github.com/alexeden/<<<package name>>>.git"
   },
   "author": "Alex Eden",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexeden/rpi-um7-imu/issues"
+    "url": "https://github.com/alexeden/<<<package name>>>/issues"
   },
-  "homepage": "https://github.com/alexeden/rpi-um7-imu#readme",
+  "homepage": "https://github.com/alexeden/<<<package name>>>#readme",
   "devDependencies": {
-    "@serialport/list": "^1.1.5",
-    "@serialport/repl": "^1.1.5",
     "@types/node": "^11.13.8",
     "chalk": "^2.4.2",
     "nodemon": "^1.18.11",
     "rimraf": "^2.6.3",
     "rsync": "^0.6.1",
+    "ts-node": "^8.1.0",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
-  },
-  "dependencies": {
-    "serialport": "^7.1.5"
   }
 }
